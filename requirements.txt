@@ -1,0 +1,21 @@
+# Core API dependencies
+together>=1.0.0
+
+# API dependencies
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
+websockets>=12.0
+
+# Streamlit UI
+streamlit>=1.28.0
+
+# Optional: Alternative NLP libraries (if you want to use rule-based extraction)
+# spacy>=3.7.0
+# nrclex>=3.0.0
+# python -m spacy download en_core_web_sm  # Run this command after installing spacy
+
+# Optional: Audio processing (for future audio support)
+# openai-whisper>=20230918
+# soundfile>=0.12.1
+# librosa>=0.10.0 
