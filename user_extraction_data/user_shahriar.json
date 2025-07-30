@@ -1,0 +1,61 @@
+{
+  "user_id": "shahriar",
+  "extractions": [
+    {
+      "timestamp": "2025-07-30T13:44:20.443911",
+      "user_id": "shahriar",
+      "topic": "No topic specified",
+      "text": "I\u2019m so happy to see my cousins after a year, but I\u2019m a little bit nervous about her reaction. we will do so many activities like shopping , sight seeing",
+      "tokens": {
+        "emotions": [
+          "happy",
+          "nervous",
+          "anxious"
+        ],
+        "activities": [
+          "see",
+          "do",
+          "shop",
+          "sight"
+        ],
+        "people": [
+          "cousins",
+          "i",
+          "we",
+          "her"
+        ]
+      },
+      "extraction_time": 1.4412212371826172
+    },
+    {
+      "timestamp": "2025-07-30T13:51:09.784053",
+      "user_id": "shahriar",
+      "topic": "No topic specified",
+      "text": "I\u2019m so happy to see my cousins after a year, but I\u2019m a little bit nervous about her reaction. we will do so many activities like shopping , sight seeing",
+      "tokens": {
+        "emotions": [
+          "happy",
+          "nervous",
+          "anxious"
+        ],
+        "activities": [
+          "see",
+          "do"
+        ],
+        "people": [
+          "cousins",
+          "i",
+          "we",
+          "her"
+        ]
+      },
+      "extraction_time": 2.4231722354888916
+    }
+  ],
+  "statistics": {
+    "total_extractions": 2,
+    "total_emotions": 6,
+    "total_activities": 6,
+    "total_people": 8
+  }
+}

@@ -11,6 +11,10 @@ import time
 from datetime import datetime
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Page configuration
 st.set_page_config(
@@ -133,12 +137,39 @@ with st.sidebar:
     api_key = None
     if strategy in ["mixed", "together"]:
         st.subheader("🔑 API Configuration")
-        api_key = st.text_input(
-            "Together API Key:",
-            type="password",
-            placeholder="Enter your Together API key",
-            help="Get your API key from https://api.together.xyz/"
-        )
+        
+        # Try to load API key from environment
+        env_api_key = os.getenv('TOGETHER_API_KEY')
+        
+        if env_api_key and env_api_key != 'your_api_key_here':
+            st.success("✅ API key loaded from environment (.env file)")
+            api_key = env_api_key
+            
+            # Show option to override with manual input
+            if st.checkbox("Override with manual API key input"):
+                api_key = st.text_input(
+                    "Together API Key:",
+                    type="password",
+                    placeholder="Enter your Together API key",
+                    help="Override the environment API key"
+                )
+        else:
+            st.info("💡 No API key found in .env file")
+            api_key = st.text_input(
+                "Together API Key:",
+                type="password",
+                placeholder="Enter your Together API key",
+                help="Get your API key from https://api.together.xyz/ or add TOGETHER_API_KEY to .env file"
+            )
+            
+            if not api_key:
+                st.markdown("""
+                **💡 Tip**: For better security, add your API key to the `.env` file:
+                ```
+                TOGETHER_API_KEY=your_actual_api_key_here
+                ```
+                Then restart the app.
+                """)
     
     # Model selection (only show if using API)
     selected_model = "mistralai/Mistral-7B-Instruct-v0.1"
@@ -477,7 +508,9 @@ with st.sidebar:
     st.header("📖 How to Use")
     st.markdown("""
     1. **Choose extraction strategy** (Mixed recommended)
-    2. **Enter API key** (if using Mixed or API strategies)
+    2. **Set up API key** (for Mixed/API strategies):
+       - Add `TOGETHER_API_KEY=your_key` to `.env` file, OR
+       - Enter manually in the API configuration section
     3. **Enter your User ID** to start tracking
     4. **Enter conversation text** to analyze
     5. **Add a topic** (optional) for organization
@@ -488,6 +521,10 @@ with st.sidebar:
     - 🔀 **Mixed**: Best accuracy, uses both methods
     - 🌐 **API Only**: Advanced AI, requires internet
     - 📝 **Rule-based**: Fast, works offline, basic accuracy
+    
+    **Security Note:**
+    - Use `.env` file for API keys (recommended)
+    - Never share your API keys publicly
     
     **Token Types:**
     - 😊 **Emotions**: Feelings expressed
