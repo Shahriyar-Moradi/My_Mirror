@@ -50,12 +50,132 @@
         ]
       },
       "extraction_time": 2.4231722354888916
+    },
+    {
+      "timestamp": "2025-07-31T12:17:02.579250",
+      "user_id": "shahriar",
+      "topic": "No topic specified",
+      "text": "a sense of pride sits on my shoulders when I witness my lil brother graduating from his masters. I remember running after him as a kid and not being able to keep up",
+      "tokens": {
+        "emotions": [
+          "pride"
+        ],
+        "activities": [
+          "run"
+        ],
+        "people": [
+          "lil brother",
+          "i",
+          "him"
+        ]
+      },
+      "extraction_time": 1.0137898921966553
+    },
+    {
+      "timestamp": "2025-07-31T12:18:41.963636",
+      "user_id": "shahriar",
+      "topic": "No topic specified",
+      "text": "a sense of pride sits on my shoulders when I witness my lil brother graduating from his masters. I remember running after him as a kid and not being able to keep up",
+      "tokens": {
+        "emotions": [
+          "pride"
+        ],
+        "activities": [
+          "run"
+        ],
+        "people": [
+          "lil brother",
+          "i",
+          "him"
+        ]
+      },
+      "extraction_time": 2.4388277530670166
+    },
+    {
+      "timestamp": "2025-07-31T12:19:04.058949",
+      "user_id": "shahriar",
+      "topic": "No topic specified",
+      "text": "A sense of pride sits on my shoulders when I witness my lil brother graduating from his master's. I remember running after him as a kid and not being able to keep up",
+      "tokens": {
+        "emotions": [
+          "pride"
+        ],
+        "activities": [
+          "run",
+          "keep up"
+        ],
+        "people": [
+          "lil brother",
+          "i",
+          "him"
+        ]
+      },
+      "extraction_time": 1.0428149700164795
+    },
+    {
+      "timestamp": "2025-07-31T12:29:25.251879",
+      "user_id": "shahriar",
+      "topic": "No topic specified",
+      "text": "a sense of pride sits on my shoulders when I witness my lil brother graduating from his masters. I remember running after him as a kid and not being able to keep up",
+      "tokens": {
+        "emotions": [
+          "pride"
+        ],
+        "activities": [
+          "run",
+          "witness"
+        ],
+        "people": [
+          "lil brother",
+          "i",
+          "him"
+        ]
+      },
+      "extraction_time": 1.2814650535583496
+    },
+    {
+      "timestamp": "2025-07-31T12:29:35.943974",
+      "user_id": "shahriar",
+      "topic": "No topic specified",
+      "text": "a sense of pride sits on my shoulders when I witness my lil brother graduating from his masters. I remember running after him as a kid and not being able to keep up",
+      "tokens": {
+        "emotions": [
+          "pride"
+        ],
+        "activities": [
+          "witness",
+          "run"
+        ],
+        "people": [
+          "lil brother"
+        ]
+      },
+      "extraction_time": 0.8445749282836914
+    },
+    {
+      "timestamp": "2025-07-31T12:29:39.775519",
+      "user_id": "shahriar",
+      "topic": "No topic specified",
+      "text": "a sense of pride sits on my shoulders when I witness my lil brother graduating from his masters. I remember running after him as a kid and not being able to keep up",
+      "tokens": {
+        "emotions": [
+          "pride"
+        ],
+        "activities": [
+          "run",
+          "witness"
+        ],
+        "people": [
+          "lil brother"
+        ]
+      },
+      "extraction_time": 0.9684982299804688
     }
   ],
   "statistics": {
-    "total_extractions": 2,
-    "total_emotions": 6,
-    "total_activities": 6,
-    "total_people": 8
+    "total_extractions": 8,
+    "total_emotions": 12,
+    "total_activities": 16,
+    "total_people": 22
   }
 }
