@@ -147,7 +147,7 @@ if st.button("Extract & Visualize", type="primary", use_container_width=True):
                 if os.path.exists(temp_filename):
                     st.header("🔎 Visualization")
                     html_content = lx.visualize(temp_filename)
-                    st.components.v1.html(html_content.data, height=400, scrolling=True)
+                    st.components.v1.html(html_content, height=400, scrolling=True)
                     
                     # Clean up the temporary file
                     os.remove(temp_filename)
